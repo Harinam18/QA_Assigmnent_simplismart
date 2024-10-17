@@ -25,7 +25,7 @@ public class GithubRepoTest extends TestBase{
     	
     	RepositoryPage repositoryPage = new RepositoryPage(driver);
     	
-        String repoName = "TestRepoPrivate5";
+        String repoName = "TestRepoPrivate8";
         repositoryPage.createRepository(repoName, false);
         
         Assert.assertEquals(repositoryPage.getRepositoryVisibility(), "private");

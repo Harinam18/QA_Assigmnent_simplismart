@@ -1,8 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [GitHub Repository Tests]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="Repository Creation Test(failed)">
+  <test thread-count="5" parallel="classes" name="ParallelTest(failed)">
     <classes>
+      <class name="testCases.TestNavigation">
+        <methods>
+          <include name="setUp"/>
+          <include name="tearDown"/>
+          <include name="testNavigationBetweenFeatures"/>
+        </methods>
+      </class> <!-- testCases.TestNavigation -->
       <class name="testCases.GithubRepoTest">
         <methods>
           <include name="setUp"/>
@@ -12,5 +19,5 @@
         </methods>
       </class> <!-- testCases.GithubRepoTest -->
     </classes>
-  </test> <!-- Repository Creation Test(failed) -->
+  </test> <!-- ParallelTest(failed) -->
 </suite> <!-- Failed suite [GitHub Repository Tests] -->
